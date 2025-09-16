@@ -10,7 +10,7 @@ const LoginSignUp = () => {
   const [signinData, setSigninData] = useState({ email: "", password: "" });
   const [signupData, setSignupData] = useState({
     name: "",
-    
+  
     email: "",
     dob: "",
     phone: "",
@@ -27,6 +27,8 @@ const LoginSignUp = () => {
   const [errors, setErrors] = useState({});
   const [showForgotModal, setShowForgotModal] = useState(false);
   const [forgotStep, setForgotStep] = useState("email");
+
+  
   const [forgotEmail, setForgotEmail] = useState("");
   const [otp, setOtp] = useState(["", "", "", ""]);
   const [newPassword, setNewPassword] = useState("");
