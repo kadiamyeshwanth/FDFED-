@@ -10,6 +10,7 @@ const LoginSignUp = () => {
   const [signinData, setSigninData] = useState({ email: "", password: "" });
   const [signupData, setSignupData] = useState({
     name: "",
+    
     email: "",
     dob: "",
     phone: "",
