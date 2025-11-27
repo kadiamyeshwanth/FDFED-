@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './ProfileSection.css';
+// Styles are in parent JoinCompany.css
 
 // Profile Header Component
 export const ProfileHeader = ({ user }) => {

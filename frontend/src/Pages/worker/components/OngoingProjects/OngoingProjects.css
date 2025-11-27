@@ -1,5 +1,10 @@
 /* Worker Ongoing Projects - Namespaced with wkop- prefix */
 
+/* Worker-specific color variables */
+.wkop-container {
+  --wkd-secondary-color: #3498db; /* Blue - Worker theme color */
+}
+
 .wkop-container {
   width: 100%;
   max-width: 1200px;
@@ -33,7 +38,7 @@
 
 .wkop-nav-link.active {
   color: var(--primary-color);
-  border-bottom-color: var(--secondary-color);
+  border-bottom-color: var(--wkd-secondary-color);
 }
 
 .wkop-nav-link:hover {
@@ -88,7 +93,7 @@
 .wkop-section-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--secondary-color);
+  color: var(--wkd-secondary-color);
   margin-bottom: 1rem;
 }
 
@@ -108,7 +113,7 @@
 
 .wkop-update-form textarea:focus {
   outline: none;
-  border-color: var(--secondary-color);
+  border-color: var(--wkd-secondary-color);
   box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 

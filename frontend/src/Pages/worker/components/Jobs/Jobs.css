@@ -1,5 +1,10 @@
 /* Worker Jobs Page - Namespaced with wkj- prefix */
 
+/* Worker-specific color variables */
+.wkj-container {
+  --wkd-secondary-color: #3498db; /* Blue - Worker theme color */
+}
+
 .wkj-container {
   height: calc(100vh - 60px);
   padding: 20px;
@@ -43,7 +48,7 @@
 
 .wkj-search-container input:focus {
   outline: none;
-  border-color: var(--secondary-color);
+  border-color: var(--wkd-secondary-color);
   box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
 }
 
@@ -78,7 +83,7 @@
 }
 
 .wkj-job-card.active {
-  border-left: 4px solid var(--secondary-color);
+  border-left: 4px solid var(--wkd-secondary-color);
   background-color: rgba(52, 152, 219, 0.05);
 }
 
@@ -225,7 +230,7 @@
 }
 
 .wkj-details-section h3 i {
-  color: var(--secondary-color);
+  color: var(--wkd-secondary-color);
 }
 
 .wkj-details-grid {

@@ -262,9 +262,10 @@ const updateWorkerProfile = async (req, res) => {
     worker.about = about || worker.about;
     worker.specialties = Array.isArray(specialties) ? specialties : (specialties ? [specialties] : []);
 
+    // CloudinaryStorage already uploads files - just use the path (Cloudinary URL)
     const profileImageFile = req.files.find(file => file.fieldname === 'profileImage');
     if (profileImageFile) {
-      worker.profileImage = profileImageFile.path;
+      worker.profileImage = profileImageFile.path; // This is already a Cloudinary URL
     }
 
     const projects = [];
@@ -276,7 +277,7 @@ const updateWorkerProfile = async (req, res) => {
             year: req.body[`projectYear-${i}`],
             location: req.body[`projectLocation-${i}`],
             description: req.body[`projectDescription-${i}`],
-            image: projectImageFile ? projectImageFile.path : worker.projects[i-1]?.image
+            image: projectImageFile ? projectImageFile.path : worker.projects[i-1]?.image // Cloudinary URL
         });
         i++;
     }

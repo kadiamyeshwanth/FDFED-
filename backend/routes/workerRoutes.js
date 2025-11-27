@@ -28,13 +28,17 @@ const {
 const isAuthenticated = require('../middlewares/auth');
 const { upload } = require('../middlewares/upload');
 
-// --- Page Navigation Routes ---
+// --- Page Navigation Routes (Legacy EJS routes) ---
 router.get('/workerjobs', isAuthenticated, getJobs);
 router.get('/workerjoin_company', isAuthenticated, getJoinCompany);
 router.get('/workersettings', isAuthenticated, getSettings);
-router.get('/worker_edit', isAuthenticated, getEditProfile); // Protected this route
+router.get('/worker_edit', isAuthenticated, getEditProfile);
 router.get('/workerdashboard', isAuthenticated, getDashboard);
 router.get('/worker/my-company', isAuthenticated, getMyCompany);
+
+// --- React API Routes (with /api prefix in app.js) ---
+router.get('/worker/dashboard', isAuthenticated, getDashboard);
+router.get('/worker/jobs', isAuthenticated, getJobs);
 
 
 // --- API and Form Submission Routes ---
