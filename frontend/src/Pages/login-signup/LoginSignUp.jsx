@@ -295,7 +295,7 @@ const LoginSignUp = () => {
         <div className="hero-content">
           <h1>Build & Beyond</h1>
           <p>
-            Welcome to Build & Beyond, your ultimate platform for seamless
+            Welcome to Build & Beyond,  your ultimate platform for seamless
             construction project management. Connect customers, companies, and
             workers effortlessly.
           </p>
